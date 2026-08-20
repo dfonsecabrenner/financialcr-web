@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Controlling &amp; Reporting — Contabilidad, impuestos y reporteo en México</title>
+<meta name="description" content="Despacho contable en México: contabilidad, impuestos, nómina, tesorería, reporteo y contraloría. Con Financial LIVE, el portal donde tu información fiscal está siempre disponible.">
+<meta property="og:title" content="Financial Controlling &amp; Reporting">
+<meta property="og:description" content="Contabilidad, impuestos y reporteo en México. Con Financial LIVE, tu portal de autoconsulta.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.financialcr.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23698A34'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.4' fill='%23fff'/%3E%3Crect x='14' y='12' width='4' height='13' rx='1.4' fill='%23fff' opacity='.85'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.4' fill='%23fff' opacity='.7'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --green:#698A34; --green-light:#8CAD4E; --green-deep:#49652E;
+    --green-tint:#F1F5EA; --green-tint2:#E3EBD6;
+    --ink:#333133; --ink-soft:#6B6A6C; --line:#E5E4E3;
+    --paper:#FBFBFA; --card:#FFFFFF;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(51,49,51,.05), 0 10px 30px rgba(51,49,51,.07);
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Barlow','Inter',sans-serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;
+    padding:13px 22px;border-radius:10px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;
+    transition:background .15s ease}
+  .btn:hover{background:var(--green-deep)}
+  .btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green-light)}
+  .btn.ghost:hover{background:var(--green-tint);color:var(--green-deep)}
+
+  /* ---------- HEADER ---------- */
+  header{position:sticky;top:0;z-index:40;background:rgba(251,251,250,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+  .brand{display:flex;align-items:center;gap:11px;flex:none}
+  .logomark{width:34px;height:34px;border-radius:8px;background:var(--green);position:relative;flex:none}
+  .logomark i{position:absolute;bottom:8px;width:4px;border-radius:1.5px;background:#fff;display:block}
+  .logomark i:nth-child(1){left:8px;height:8px;opacity:1}
+  .logomark i:nth-child(2){left:14px;height:13px;opacity:.85}
+  .logomark i:nth-child(3){left:20px;height:18px;opacity:.7}
+  .brand b{font-family:'Barlow',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;display:block}
+  .brand span{font-size:.7rem;color:var(--ink-soft);letter-spacing:.04em;display:block}
+  nav.links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
+  nav.links a:hover{color:var(--green)}
+  .nav-right{display:flex;align-items:center;gap:14px;flex:none}
+  .lang{display:flex;gap:2px;background:var(--green-tint);border-radius:8px;padding:3px}
+  .lang button{border:none;background:none;font:inherit;font-size:.78rem;font-weight:600;color:var(--ink-soft);
+    padding:5px 9px;border-radius:6px;cursor:pointer}
+  .lang button.on{background:#fff;color:var(--green-deep);box-shadow:0 1px 2px rgba(0,0,0,.07)}
+  .burger{display:none;border:none;background:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:84px 0 72px;background:
+    radial-gradient(900px 380px at 82% -10%, var(--green-tint) 0%, transparent 62%);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2rem,3.4vw,2.85rem);margin:14px 0 18px;max-width:16ch}
+  .hero p.lead{font-size:1.05rem;color:var(--ink-soft);max-width:34em}
+  .hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:26px;margin-top:44px;justify-content:start}
+  .hero-stats div b{font-family:'Barlow',sans-serif;font-size:1.75rem;color:var(--green-deep);display:block;line-height:1}
+  .hero-stats div span{font-size:.82rem;color:var(--ink-soft)}
+
+  /* ---------- PORTAL MOCK ---------- */
+  .mock{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+  .mock-bar{display:flex;align-items:center;gap:6px;padding:11px 14px;border-bottom:1px solid var(--line);background:#fff}
+  .mock-bar i{width:9px;height:9px;border-radius:50%;background:#E5E4E3;display:block}
+  .mock-bar .url{margin-left:10px;font-size:.7rem;color:var(--ink-soft);background:var(--paper);border-radius:5px;
+    padding:3px 10px;flex:1}
+  .mock-body{display:grid;grid-template-columns:104px 1fr;min-height:328px}
+  .mock-side{background:var(--green-deep);padding:16px 12px;display:flex;flex-direction:column;gap:6px}
+  .mock-side .s{height:9px;border-radius:4px;background:rgba(255,255,255,.22)}
+  .mock-side .s.on{background:var(--green-light)}
+  .mock-side .logo{width:22px;height:22px;border-radius:6px;background:var(--green-light);margin-bottom:14px}
+  .mock-main{padding:18px 18px 20px;position:relative}
+  .slide{display:none;animation:fade .45s ease}
+  .slide.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .slide h5{font-family:'Barlow',sans-serif;font-size:.95rem;margin-bottom:3px}
+  .slide .sub{font-size:.72rem;color:var(--ink-soft);margin-bottom:14px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px}
+  .kpi{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:9px 10px}
+  .kpi span{font-size:.62rem;color:var(--ink-soft);display:block;letter-spacing:.02em}
+  .kpi b{font-family:'Barlow',sans-serif;font-size:1rem;display:block;margin-top:2px}
+  .kpi b.pos{color:var(--green)} .kpi b.neg{color:var(--ink)}
+  .bars{display:flex;align-items:flex-end;gap:7px;height:84px;padding-top:6px}
+  .bars div{flex:1;border-radius:4px 4px 0 0;background:var(--green-light)}
+  .bars div:nth-child(even){background:var(--green-tint2)}
+  .rows{display:flex;flex-direction:column;gap:6px}
+  .row{display:flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);
+    border-radius:8px;padding:8px 10px;font-size:.7rem}
+  .row .dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex:none}
+  .row .dot.amber{background:#E8A33D} .row .dot.grey{background:#C8C7C6}
+  .row .t{flex:1;color:var(--ink)}
+  .row .v{font-weight:600;color:var(--ink-soft)}
+  .dots{display:flex;gap:6px;justify-content:center;margin-top:18px}
+  .dots button{width:7px;height:7px;border-radius:50%;border:none;background:var(--green-tint2);cursor:pointer;padding:0}
+  .dots button.on{background:var(--green);width:20px;border-radius:4px}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:78px 0}
+  .sec-head{max-width:44em;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(1.6rem,2.9vw,2.25rem);margin:12px 0 14px}
+  .sec-head p{color:var(--ink-soft);font-size:1.02rem}
+  #live{background:var(--green-deep);color:#fff}
+  #live .sec-head h2,#live h3{color:#fff}
+  #live .sec-head p{color:rgba(255,255,255,.76)}
+  #live .eyebrow{color:var(--green-light)}
+  .live-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:52px;align-items:center}
+  .live-list{display:flex;flex-direction:column;gap:18px;margin-top:6px}
+  .live-list > div{display:flex;gap:13px;align-items:flex-start}
+  .live-list .ic{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.12);flex:none;
+    display:flex;align-items:center;justify-content:center;color:var(--green-light);font-weight:700;font-size:.8rem}
+  .live-list h4{font-size:.98rem;margin-bottom:2px;color:#fff}
+  .live-list p{font-size:.88rem;color:rgba(255,255,255,.7)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px}
+  .card .ic{width:38px;height:38px;border-radius:10px;background:var(--green-tint);color:var(--green-deep);
+    display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px;font-family:'Barlow',sans-serif}
+  .card h3{font-size:1.05rem;margin-bottom:7px}
+  .card p{font-size:.92rem;color:var(--ink-soft)}
+  .card.plan{display:flex;flex-direction:column}
+  .card.plan .tag{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);
+    margin-bottom:9px}
+  .card.plan ul{list-style:none;margin:14px 0 0;display:flex;flex-direction:column;gap:8px}
+  .card.plan li{font-size:.89rem;color:var(--ink-soft);padding-left:20px;position:relative}
+  .card.plan li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;
+    background:var(--green-tint2);border:2px solid var(--green-light)}
+  .card.plan.hi{border-color:var(--green-light);box-shadow:var(--shadow)}
+  #startups{background:var(--green-tint)}
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .why div h3{font-size:1rem;margin:0 0 6px}
+  .why div p{font-size:.88rem;color:var(--ink-soft)}
+  .why div{border-top:3px solid var(--green-light);padding-top:16px}
+
+  /* ---------- CONTACT ---------- */
+  #contacto .box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:42px 38px;
+    display:grid;grid-template-columns:1fr 1fr;gap:44px;box-shadow:var(--shadow)}
+  .contact-list{display:flex;flex-direction:column;gap:16px;margin-top:22px}
+  .contact-list a{display:flex;gap:12px;align-items:center;font-size:.98rem;font-weight:500}
+  .contact-list .ic{width:36px;height:36px;border-radius:9px;background:var(--green-tint);color:var(--green-deep);
+    display:flex;align-items:center;justify-content:center;flex:none}
+  form label{display:block;font-size:.78rem;font-weight:600;color:var(--ink-soft);margin:0 0 6px}
+  form .f{margin-bottom:14px}
+  form input,form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;
+    font:inherit;font-size:.93rem;background:var(--paper)}
+  form input:focus,form textarea:focus{outline:2px solid var(--green-light);border-color:transparent;background:#fff}
+  form textarea{min-height:104px;resize:vertical}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;font-size:.85rem;color:var(--ink-soft)}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+
+  @media(max-width:900px){
+    .hero-grid,.live-grid,#contacto .box{grid-template-columns:1fr;gap:38px}
+    .grid3,.why{grid-template-columns:1fr 1fr}
+    nav.links{display:none}
+    nav.links.open{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;
+      padding:18px 24px;gap:14px;border-bottom:1px solid var(--line)}
+    .burger{display:block}
+  }
+  @media(max-width:620px){
+    .grid3,.grid2,.why{grid-template-columns:1fr}
+    section{padding:58px 0}
+    .hero{padding:56px 0 48px}
+    #contacto .box{padding:30px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="logomark"><i></i><i></i><i></i></span>
+      <span>
+        <b>Financial</b>
+        <span>Controlling &amp; Reporting</span>
+      </span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#live" data-i18n="nav_live">Financial LIVE</a>
+      <a href="#servicios" data-i18n="nav_serv">Servicios</a>
+      <a href="#modelos" data-i18n="nav_models">Modelos</a>
+      <a href="#startups" data-i18n="nav_startups">Startups</a>
+      <a href="#nosotros" data-i18n="nav_about">Nosotros</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang">
+        <button data-lang="es" class="on">ES</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="de">DE</button>
+      </div>
+      <a class="btn" href="#contacto" data-i18n="cta_talk">Hablemos</a>
+      <button class="burger" id="burger" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eyebrow">Despacho contable · México</span>
+      <h1 data-i18n="hero_h1">Tu contabilidad, en orden. Tu información, siempre a la mano.</h1>
+      <p class="lead" data-i18n="hero_lead">Contabilidad, impuestos, nómina, tesorería, reporteo y contraloría para empresas que necesitan números confiables y a tiempo. Y con Financial LIVE, tu portal de autoconsulta, dejas de esperar a que alguien te mande el archivo.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contacto" data-i18n="cta_diag">Solicitar diagnóstico</a>
+        <a class="btn ghost" href="#live" data-i18n="cta_see_live">Ver Financial LIVE</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>85%</b><span data-i18n="stat1">del proceso contable automatizado</span></div>
+        <div><b>SAT</b><span data-i18n="stat2">conexión directa y continua</span></div>
+        <div><b>24/7</b><span data-i18n="stat3">acceso a tu información</span></div>
+      </div>
+    </div>
+
+    <!-- PORTAL CARRUSEL -->
+    <div class="mock" id="carousel">
+      <div class="mock-bar">
+        <i></i><i></i><i></i>
+        <span class="url">portal.financialcr.com</span>
+      </div>
+      <div class="mock-body">
+        <div class="mock-side">
+          <div class="logo"></div>
+          <div class="s on"></div><div class="s"></div><div class="s"></div>
+          <div class="s"></div><div class="s"></div><div class="s"></div><div class="s"></div>
+        </div>
+        <div class="mock-main">
+          <div class="slide on">
+            <h5 data-i18n="sl1_t">Resumen</h5>
+            <p class="sub" data-i18n="sl1_s">Tu posición del mes, de un vistazo</p>
+            <div class="kpis">
+              <div class="kpi"><span data-i18n="k_in">Ingresos</span><b class="pos">$1.84M</b></div>
+              <div class="kpi"><span data-i18n="k_out">Egresos</span><b class="neg">$1.21M</b></div>
+              <div class="kpi"><span data-i18n="k_res">Resultado</span><b class="pos">$630K</b></div>
+            </div>
+            <div class="bars">
+              <div style="height:46%"></div><div style="height:62%"></div><div style="height:38%"></div>
+              <div style="height:74%"></div><div style="height:55%"></div><div style="height:88%"></div>
+              <div style="height:67%"></div><div style="height:79%"></div>
+            </div>
+          </div>
+          <div class="slide">
+            <h5 data-i18n="sl2_t">Facturas</h5>
+            <p class="sub" data-i18n="sl2_s">CFDI emitidos y recibidos, desde el SAT</p>
+            <div class="rows">
+              <div class="row"><span class="dot"></span><span class="t">CFDI A-1042 · Cliente MX</span><span class="v">$248,900</span></div>
+              <div class="row"><span class="dot"></span><span class="t">CFDI A-1041 · Servicios</span><span class="v">$92,400</span></div>
+              <div class="row"><span class="dot grey"></span><span class="t">CFDI R-8871 · Proveedor</span><span class="v">$38,120</span></div>
+              <div class="row"><span class="dot"></span><span class="t">CFDI A-1040 · Cliente MX</span><span class="v">$176,300</span></div>
+              <div class="row"><span class="dot grey"></span><span class="t">CFDI R-8870 · Arrendamiento</span><span class="v">$45,000</span></div>
+            </div>
+          </div>
+          <div class="slide">
+            <h5 data-i18n="sl3_t">Impuestos y declaraciones</h5>
+            <p class="sub" data-i18n="sl3_s">Calendario por régimen, con día hábil ajustado</p>
+            <div class="rows">
+              <div class="row"><span class="dot"></span><span class="t">ISR provisional · Julio</span><span class="v" data-i18n="v_paid">Pagado</span></div>
+              <div class="row"><span class="dot"></span><span class="t">IVA mensual · Julio</span><span class="v" data-i18n="v_paid2">Pagado</span></div>
+              <div class="row"><span class="dot amber"></span><span class="t">DIOT · Agosto</span><span class="v">17.09</span></div>
+              <div class="row"><span class="dot amber"></span><span class="t" data-i18n="v_ecount">Contabilidad electrónica</span><span class="v">03.09</span></div>
+              <div class="row"><span class="dot grey"></span><span class="t" data-i18n="v_ret">Retenciones · Agosto</span><span class="v">17.09</span></div>
+            </div>
+          </div>
+          <div class="slide">
+            <h5 data-i18n="sl4_t">Expediente fiscal</h5>
+            <p class="sub" data-i18n="sl4_s">Constancia, opinión 32-D, acuses y comprobantes</p>
+            <div class="rows">
+              <div class="row"><span class="dot"></span><span class="t" data-i18n="v_csf">Constancia de Situación Fiscal</span><span class="v">PDF</span></div>
+              <div class="row"><span class="dot"></span><span class="t" data-i18n="v_32d">Opinión de cumplimiento 32-D</span><span class="v" data-i18n="v_pos">Positiva</span></div>
+              <div class="row"><span class="dot"></span><span class="t" data-i18n="v_ack">Acuses de declaración</span><span class="v">2026</span></div>
+              <div class="row"><span class="dot grey"></span><span class="t" data-i18n="v_pay">Comprobantes de pago</span><span class="v">ZIP</span></div>
+              <div class="row"><span class="dot"></span><span class="t" data-i18n="v_efirma">e.firma y sellos</span><span class="v" data-i18n="v_valid">Vigente</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:0 0 16px"><div class="dots" id="dots"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCIAL LIVE -->
+<section id="live">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Financial LIVE</span>
+      <h2 data-i18n="live_h2">El portal donde tu empresa consulta su información fiscal sin pedirla</h2>
+      <p data-i18n="live_p">Conectamos ContaLink, el SAT y tu expediente documental en un solo lugar. Tú entras, filtras y descargas: ingresos y egresos, facturas, impuestos, declaraciones, expediente fiscal y tus datos ante el SAT. Actualizado todos los días.</p>
+    </div>
+    <div class="live-grid">
+      <div class="live-list">
+        <div><span class="ic">1</span><div><h4 data-i18n="lf1_t">Siempre disponible</h4><p data-i18n="lf1_p">Tu información no depende de que alguien conteste un correo. Entras cuando la necesitas.</p></div></div>
+        <div><span class="ic">2</span><div><h4 data-i18n="lf2_t">Aislado por RFC</h4><p data-i18n="lf2_p">Cada empresa ve únicamente lo suyo. Seguridad a nivel de registro, sin excepciones.</p></div></div>
+        <div><span class="ic">3</span><div><h4 data-i18n="lf3_t">Calendario fiscal vivo</h4><p data-i18n="lf3_p">Vencimientos por régimen, ajustados a día hábil, con el estatus real de cada obligación.</p></div></div>
+        <div><span class="ic">4</span><div><h4 data-i18n="lf4_t">Para directores, no para contadores</h4><p data-i18n="lf4_p">Reportes que se leen sin traductor, exportables a Excel y PDF.</p></div></div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)">
+          <h3 style="font-size:1.1rem;margin-bottom:10px" data-i18n="live_box_t">Siete secciones, una sola verdad</h3>
+          <p style="color:rgba(255,255,255,.72);font-size:.92rem" data-i18n="live_box_p">Resumen · Ingresos y Egresos · Facturas · Impuestos y Declaraciones · Expediente Fiscal · Datos ante el SAT · Historial. Todo alimentado del mismo origen que usamos para cerrar tu contabilidad, así que lo que ves es lo que se declara.</p>
+          <div style="margin-top:20px"><a class="btn" style="background:#fff;color:var(--green-deep)" href="#contacto" data-i18n="live_cta">Pedir una demo</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="serv_eyebrow">Servicios</span>
+      <h2 data-i18n="serv_h2">Seis áreas, un solo equipo responsable</h2>
+      <p data-i18n="serv_p">Operamos tu función financiera completa o la parte que necesites reforzar, con la misma disciplina de cierre y reporteo.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="ic">01</div><h3 data-i18n="s1_t">Contabilidad</h3><p data-i18n="s1_p">Registro, conciliaciones y cierre mensual con interfaces automáticas de banco y SAT. Contabilidad electrónica lista para envío.</p></div>
+      <div class="card"><div class="ic">02</div><h3 data-i18n="s2_t">Impuestos</h3><p data-i18n="s2_p">Cálculo y presentación de ISR, IVA, retenciones y DIOT. Control de obligaciones por régimen y seguimiento de la opinión 32-D.</p></div>
+      <div class="card"><div class="ic">03</div><h3 data-i18n="s3_t">Nómina</h3><p data-i18n="s3_p">Cálculo, timbrado y dispersión. IMSS, INFONAVIT e impuestos estatales, con el expediente laboral en orden.</p></div>
+      <div class="card"><div class="ic">04</div><h3 data-i18n="s4_t">Tesorería</h3><p data-i18n="s4_p">Programación de pagos, control de saldos y flujo proyectado. Tu operación no se detiene por un vencimiento no visto.</p></div>
+      <div class="card"><div class="ic">05</div><h3 data-i18n="s5_t">Reporteo</h3><p data-i18n="s5_p">Estados financieros y KPIs personalizados para dirección y consejo, en el formato en que los necesitas presentar.</p></div>
+      <div class="card"><div class="ic">06</div><h3 data-i18n="s6_t">Contraloría</h3><p data-i18n="s6_p">Políticas, control interno y supervisión del equipo contable interno. Ojos externos sobre los números que firmas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELOS -->
+<section id="modelos" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="mod_eyebrow">Cómo trabajamos</span>
+      <h2 data-i18n="mod_h2">Tres modelos de colaboración</h2>
+      <p data-i18n="mod_p">Elegimos juntos el que corresponde a tu etapa. Se puede migrar de uno a otro sin rehacer la contabilidad.</p>
+    </div>
+    <div class="grid3">
+      <div class="card plan">
+        <span class="tag" data-i18n="m1_tag">Modelo 1</span>
+        <h3 data-i18n="m1_t">Contabilidad integral</h3>
+        <p data-i18n="m1_p">Nosotros llevamos todo: registro, impuestos, nómina y cierre.</p>
+        <ul>
+          <li data-i18n="m1_l1">Cierre mensual y declaraciones</li>
+          <li data-i18n="m1_l2">Expediente fiscal completo</li>
+          <li data-i18n="m1_l3">Acceso a Financial LIVE</li>
+        </ul>
+      </div>
+      <div class="card plan hi">
+        <span class="tag" data-i18n="m2_tag">Modelo 2</span>
+        <h3 data-i18n="m2_t">Contraloría externa</h3>
+        <p data-i18n="m2_p">Tu equipo registra; nosotros supervisamos, corregimos y reportamos.</p>
+        <ul>
+          <li data-i18n="m2_l1">Revisión de cierre y de impuestos</li>
+          <li data-i18n="m2_l2">Control interno y políticas</li>
+          <li data-i18n="m2_l3">Reporteo a dirección y consejo</li>
+        </ul>
+      </div>
+      <div class="card plan">
+        <span class="tag" data-i18n="m3_tag">Modelo 3</span>
+        <h3 data-i18n="m3_t">Proyectos y asesoría</h3>
+        <p data-i18n="m3_p">Alcance definido: puesta al día, apertura, auditoría o due diligence.</p>
+        <ul>
+          <li data-i18n="m3_l1">Regularización de ejercicios</li>
+          <li data-i18n="m3_l2">Constitución y alta ante el SAT</li>
+          <li data-i18n="m3_l3">Soporte en revisiones y auditorías</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STARTUPS -->
+<section id="startups">
+  <div class="wrap">
+    <div class="live-grid">
+      <div>
+        <span class="eyebrow" data-i18n="st_eyebrow">Startups y empresas extranjeras</span>
+        <h2 style="font-size:clamp(1.6rem,2.9vw,2.15rem);margin:12px 0 14px" data-i18n="st_h2">Entrar a México sin tropezar con el SAT</h2>
+        <p style="color:var(--ink-soft)" data-i18n="st_p">Acompañamos la constitución, el alta de obligaciones, la e.firma y los primeros cierres. Si tu matriz está fuera, reportamos en el formato y el idioma que tu casa matriz necesita — español, inglés o alemán.</p>
+        <div class="hero-cta"><a class="btn" href="#contacto" data-i18n="st_cta">Hablar de mi caso</a></div>
+      </div>
+      <div class="grid2">
+        <div class="card"><h3 data-i18n="st1_t">Constitución y alta</h3><p data-i18n="st1_p">Sociedad, RFC, régimen, e.firma y sellos digitales.</p></div>
+        <div class="card"><h3 data-i18n="st2_t">Primeros cierres</h3><p data-i18n="st2_p">Contabilidad desde el día uno, sin deuda técnica fiscal.</p></div>
+        <div class="card"><h3 data-i18n="st3_t">Reporteo a matriz</h3><p data-i18n="st3_p">Paquetes de reporte en ES, EN o DE, con el calendario del grupo.</p></div>
+        <div class="card"><h3 data-i18n="st4_t">Nómina y expatriados</h3><p data-i18n="st4_p">Altas IMSS, cálculo y cumplimiento para personal local y extranjero.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="why_eyebrow">Por qué nosotros</span>
+      <h2 data-i18n="why_h2">Números confiables, entregados a tiempo</h2>
+    </div>
+    <div class="why">
+      <div><h3 data-i18n="w1_t">Calidad</h3><p data-i18n="w1_p">Política de excelencia en el cierre: mejor visión financiera, sana relación con el SAT y decisiones con claridad.</p></div>
+      <div><h3 data-i18n="w2_t">Tecnología</h3><p data-i18n="w2_p">Automatizamos el 85% del proceso contable. Menos error humano, menos tiempo de respuesta, conexión directa con el SAT.</p></div>
+      <div><h3 data-i18n="w3_t">Mejores prácticas</h3><p data-i18n="w3_p">Cartera amplia en industrias distintas: lo que funciona en una, lo llevamos a la tuya.</p></div>
+      <div><h3 data-i18n="w4_t">Precios a la medida</h3><p data-i18n="w4_p">El servicio se adapta a tu operación, no al revés. Reportes personalizados con tus KPIs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <span class="eyebrow" data-i18n="c_eyebrow">Contacto</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2rem);margin:12px 0 12px" data-i18n="c_h2">Cuéntanos dónde estás parado</h2>
+        <p style="color:var(--ink-soft);font-size:.98rem" data-i18n="c_p">Una llamada de 30 minutos basta para saber si podemos ayudarte y qué modelo tiene sentido. Sin compromiso.</p>
+        <div class="contact-list">
+          <a href="tel:+525537356826"><span class="ic">☎</span><span>+52 55 3735 6826</span></a>
+          <a href="mailto:fonseca@financialcr.com"><span class="ic">✉</span><span>fonseca@financialcr.com</span></a>
+        </div>
+      </div>
+      <form onsubmit="return sendMail(event)">
+        <div class="f"><label data-i18n="f_name">Nombre</label><input id="f_name" required></div>
+        <div class="f"><label data-i18n="f_company">Empresa</label><input id="f_co"></div>
+        <div class="f"><label data-i18n="f_email">Correo</label><input id="f_mail" type="email" required></div>
+        <div class="f"><label data-i18n="f_msg">¿Qué necesitas?</label><textarea id="f_msg"></textarea></div>
+        <button class="btn" style="width:100%" type="submit" data-i18n="f_send">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Financial Controlling &amp; Reporting</span>
+    <span data-i18n="foot_tag">Contabilidad · Impuestos · Nómina · Tesorería · Reporteo · Contraloría</span>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  en:{
+    nav_live:"Financial LIVE",nav_serv:"Services",nav_models:"Models",nav_startups:"Startups",nav_about:"About us",nav_contact:"Contact",
+    cta_talk:"Let's talk",
+    hero_eyebrow:"Accounting firm · Mexico",
+    hero_h1:"Your books in order. Your numbers always within reach.",
+    hero_lead:"Accounting, tax, payroll, treasury, reporting and controllership for companies that need reliable numbers on time. And with Financial LIVE, your self-service portal, you stop waiting for someone to email you a file.",
+    cta_diag:"Request a diagnostic",cta_see_live:"See Financial LIVE",
+    stat1:"of the accounting process automated",stat2:"direct, continuous connection",stat3:"access to your information",
+    sl1_t:"Overview",sl1_s:"Your month at a glance",k_in:"Revenue",k_out:"Expenses",k_res:"Result",
+    sl2_t:"Invoices",sl2_s:"CFDI issued and received, straight from the SAT",
+    sl3_t:"Taxes and filings",sl3_s:"Calendar by tax regime, adjusted to business days",
+    v_paid:"Paid",v_paid2:"Paid",v_ecount:"Electronic accounting",v_ret:"Withholdings · August",
+    sl4_t:"Tax file",sl4_s:"Tax status certificate, 32-D opinion, receipts and proofs",
+    v_csf:"Tax Status Certificate",v_32d:"32-D compliance opinion",v_pos:"Positive",v_ack:"Filing receipts",
+    v_pay:"Payment proofs",v_efirma:"e.firma and seals",v_valid:"Valid",
+    live_h2:"The portal where your company looks up its tax information without asking for it",
+    live_p:"We connect ContaLink, the SAT and your document file in one place. You log in, filter and download: revenue and expenses, invoices, taxes, filings, tax file and your SAT registration data. Updated every day.",
+    lf1_t:"Always available",lf1_p:"Your information doesn't depend on someone answering an email. Log in whenever you need it.",
+    lf2_t:"Isolated by tax ID",lf2_p:"Each company sees only its own data. Row-level security, no exceptions.",
+    lf3_t:"Live tax calendar",lf3_p:"Due dates by regime, adjusted to business days, with the real status of every obligation.",
+    lf4_t:"Built for directors, not accountants",lf4_p:"Reports you can read without a translator, exportable to Excel and PDF.",
+    live_box_t:"Seven sections, one single truth",
+    live_box_p:"Overview · Revenue and Expenses · Invoices · Taxes and Filings · Tax File · SAT Registration Data · History. All fed from the same source we use to close your books, so what you see is what gets filed.",
+    live_cta:"Request a demo",
+    serv_eyebrow:"Services",serv_h2:"Six areas, one accountable team",
+    serv_p:"We run your entire finance function, or the part you need to reinforce, with the same closing and reporting discipline.",
+    s1_t:"Accounting",s1_p:"Bookkeeping, reconciliations and monthly close with automated bank and SAT interfaces. Electronic accounting ready to file.",
+    s2_t:"Tax",s2_p:"Calculation and filing of income tax, VAT, withholdings and DIOT. Obligation control by regime and 32-D opinion monitoring.",
+    s3_t:"Payroll",s3_p:"Calculation, stamping and disbursement. IMSS, INFONAVIT and state taxes, with the employment file in order.",
+    s4_t:"Treasury",s4_p:"Payment scheduling, balance control and projected cash flow. Your operation never stops over a missed due date.",
+    s5_t:"Reporting",s5_p:"Financial statements and custom KPIs for management and the board, in the format you need to present them.",
+    s6_t:"Controllership",s6_p:"Policies, internal control and supervision of your in-house accounting team. External eyes on the numbers you sign.",
+    mod_eyebrow:"How we work",mod_h2:"Three collaboration models",
+    mod_p:"We pick the one that matches your stage. You can move between them without redoing the accounting.",
+    m1_tag:"Model 1",m1_t:"Full accounting",m1_p:"We handle everything: bookkeeping, tax, payroll and close.",
+    m1_l1:"Monthly close and filings",m1_l2:"Complete tax file",m1_l3:"Financial LIVE access",
+    m2_tag:"Model 2",m2_t:"External controllership",m2_p:"Your team books it; we supervise, correct and report.",
+    m2_l1:"Close and tax review",m2_l2:"Internal control and policies",m2_l3:"Reporting to management and board",
+    m3_tag:"Model 3",m3_t:"Projects and advisory",m3_p:"Defined scope: catch-up, incorporation, audit or due diligence.",
+    m3_l1:"Catching up prior years",m3_l2:"Incorporation and SAT registration",m3_l3:"Support in reviews and audits",
+    st_eyebrow:"Startups and foreign companies",st_h2:"Entering Mexico without tripping over the SAT",
+    st_p:"We handle incorporation, tax registration, the e.firma and your first closes. If your parent company is abroad, we report in the format and language it needs — Spanish, English or German.",
+    st_cta:"Discuss my case",
+    st1_t:"Incorporation and registration",st1_p:"Entity, tax ID, regime, e.firma and digital seals.",
+    st2_t:"First closes",st2_p:"Accounting from day one, with no tax technical debt.",
+    st3_t:"Group reporting",st3_p:"Reporting packages in ES, EN or DE, on the group's calendar.",
+    st4_t:"Payroll and expatriates",st4_p:"IMSS registration, calculation and compliance for local and foreign staff.",
+    why_eyebrow:"Why us",why_h2:"Reliable numbers, delivered on time",
+    w1_t:"Quality",w1_p:"A policy of excellence at close: better financial visibility, a healthy relationship with the SAT and clearer decisions.",
+    w2_t:"Technology",w2_p:"We automate 85% of the accounting process. Less human error, faster response, direct connection with the SAT.",
+    w3_t:"Best practices",w3_p:"A broad client base across industries: what works in one, we bring to yours.",
+    w4_t:"Tailored pricing",w4_p:"The service adapts to your operation, not the other way around. Custom reports with your KPIs.",
+    c_eyebrow:"Contact",c_h2:"Tell us where you stand",
+    c_p:"A 30-minute call is enough to know whether we can help and which model makes sense. No commitment.",
+    f_name:"Name",f_company:"Company",f_email:"Email",f_msg:"What do you need?",f_send:"Send",
+    foot_tag:"Accounting · Tax · Payroll · Treasury · Reporting · Controllership"
+  },
+  de:{
+    nav_live:"Financial LIVE",nav_serv:"Leistungen",nav_models:"Modelle",nav_startups:"Start-ups",nav_about:"Über uns",nav_contact:"Kontakt",
+    cta_talk:"Sprechen wir",
+    hero_eyebrow:"Steuer- und Buchhaltungskanzlei · Mexiko",
+    hero_h1:"Ihre Buchhaltung in Ordnung. Ihre Zahlen jederzeit griffbereit.",
+    hero_lead:"Buchhaltung, Steuern, Lohn, Treasury, Reporting und Controlling für Unternehmen, die verlässliche Zahlen pünktlich brauchen. Und mit Financial LIVE, Ihrem Self-Service-Portal, warten Sie nicht mehr darauf, dass Ihnen jemand eine Datei schickt.",
+    cta_diag:"Analyse anfragen",cta_see_live:"Financial LIVE ansehen",
+    stat1:"des Buchhaltungsprozesses automatisiert",stat2:"direkte, laufende Anbindung",stat3:"Zugriff auf Ihre Daten",
+    sl1_t:"Übersicht",sl1_s:"Ihr Monat auf einen Blick",k_in:"Erlöse",k_out:"Aufwand",k_res:"Ergebnis",
+    sl2_t:"Rechnungen",sl2_s:"Ausgestellte und erhaltene CFDI, direkt vom SAT",
+    sl3_t:"Steuern und Erklärungen",sl3_s:"Kalender nach Steuerregime, auf Werktage angepasst",
+    v_paid:"Bezahlt",v_paid2:"Bezahlt",v_ecount:"Elektronische Buchführung",v_ret:"Einbehalte · August",
+    sl4_t:"Steuerakte",sl4_s:"Steuerbescheinigung, 32-D-Auskunft, Belege und Nachweise",
+    v_csf:"Steuerliche Ansässigkeitsbescheinigung",v_32d:"32-D-Unbedenklichkeitsauskunft",v_pos:"Positiv",v_ack:"Einreichungsbelege",
+    v_pay:"Zahlungsnachweise",v_efirma:"e.firma und Siegel",v_valid:"Gültig",
+    live_h2:"Das Portal, in dem Ihr Unternehmen seine Steuerdaten abruft, ohne danach zu fragen",
+    live_p:"Wir verbinden ContaLink, den SAT und Ihre Dokumentenakte an einem Ort. Sie melden sich an, filtern und laden herunter: Erlöse und Aufwendungen, Rechnungen, Steuern, Erklärungen, Steuerakte und Ihre SAT-Stammdaten. Täglich aktualisiert.",
+    lf1_t:"Immer verfügbar",lf1_p:"Ihre Daten hängen nicht davon ab, dass jemand eine E-Mail beantwortet. Sie greifen zu, wenn Sie sie brauchen.",
+    lf2_t:"Nach Steuernummer getrennt",lf2_p:"Jedes Unternehmen sieht ausschließlich seine eigenen Daten. Zeilenbasierte Sicherheit, ohne Ausnahme.",
+    lf3_t:"Lebender Steuerkalender",lf3_p:"Fristen nach Regime, auf Werktage angepasst, mit dem tatsächlichen Status jeder Pflicht.",
+    lf4_t:"Für Geschäftsführung, nicht für Buchhalter",lf4_p:"Berichte, die man ohne Übersetzer liest — exportierbar nach Excel und PDF.",
+    live_box_t:"Sieben Bereiche, eine einzige Wahrheit",
+    live_box_p:"Übersicht · Erlöse und Aufwendungen · Rechnungen · Steuern und Erklärungen · Steuerakte · SAT-Stammdaten · Historie. Alles aus derselben Quelle, mit der wir Ihren Abschluss erstellen — was Sie sehen, wird auch erklärt.",
+    live_cta:"Demo anfragen",
+    serv_eyebrow:"Leistungen",serv_h2:"Sechs Bereiche, ein verantwortliches Team",
+    serv_p:"Wir führen Ihre gesamte Finanzfunktion oder genau den Teil, den Sie verstärken möchten — mit derselben Abschluss- und Reporting-Disziplin.",
+    s1_t:"Buchhaltung",s1_p:"Erfassung, Abstimmungen und Monatsabschluss mit automatischen Bank- und SAT-Schnittstellen. Elektronische Buchführung übermittlungsbereit.",
+    s2_t:"Steuern",s2_p:"Berechnung und Einreichung von ISR, IVA, Einbehalten und DIOT. Pflichtenkontrolle nach Regime und Überwachung der 32-D-Auskunft.",
+    s3_t:"Lohn",s3_p:"Berechnung, Stempelung und Auszahlung. IMSS, INFONAVIT und Landessteuern, mit geordneter Personalakte.",
+    s4_t:"Treasury",s4_p:"Zahlungsplanung, Saldenkontrolle und Cashflow-Prognose. Kein Stillstand wegen einer übersehenen Frist.",
+    s5_t:"Reporting",s5_p:"Jahresabschlüsse und individuelle KPIs für Geschäftsführung und Beirat — im Format, das Sie präsentieren müssen.",
+    s6_t:"Controlling",s6_p:"Richtlinien, interne Kontrolle und Aufsicht über Ihr internes Buchhaltungsteam. Externer Blick auf die Zahlen, die Sie unterschreiben.",
+    mod_eyebrow:"Wie wir arbeiten",mod_h2:"Drei Formen der Zusammenarbeit",
+    mod_p:"Wir wählen gemeinsam die Form, die zu Ihrer Phase passt. Ein Wechsel ist möglich, ohne die Buchhaltung neu aufzusetzen.",
+    m1_tag:"Modell 1",m1_t:"Vollständige Buchhaltung",m1_p:"Wir übernehmen alles: Erfassung, Steuern, Lohn und Abschluss.",
+    m1_l1:"Monatsabschluss und Erklärungen",m1_l2:"Vollständige Steuerakte",m1_l3:"Zugang zu Financial LIVE",
+    m2_tag:"Modell 2",m2_t:"Externes Controlling",m2_p:"Ihr Team bucht, wir prüfen, korrigieren und berichten.",
+    m2_l1:"Prüfung von Abschluss und Steuern",m2_l2:"Interne Kontrolle und Richtlinien",m2_l3:"Reporting an Geschäftsführung und Beirat",
+    m3_tag:"Modell 3",m3_t:"Projekte und Beratung",m3_p:"Klar abgegrenzt: Aufarbeitung, Gründung, Prüfung oder Due Diligence.",
+    m3_l1:"Aufarbeitung früherer Jahre",m3_l2:"Gründung und SAT-Registrierung",m3_l3:"Unterstützung bei Prüfungen",
+    st_eyebrow:"Start-ups und ausländische Unternehmen",st_h2:"Markteintritt in Mexiko, ohne über den SAT zu stolpern",
+    st_p:"Wir begleiten Gründung, steuerliche Registrierung, e.firma und die ersten Abschlüsse. Sitzt Ihre Muttergesellschaft im Ausland, berichten wir im Format und in der Sprache, die sie braucht — Spanisch, Englisch oder Deutsch.",
+    st_cta:"Über meinen Fall sprechen",
+    st1_t:"Gründung und Registrierung",st1_p:"Gesellschaft, Steuernummer, Regime, e.firma und digitale Siegel.",
+    st2_t:"Erste Abschlüsse",st2_p:"Buchhaltung ab Tag eins, ohne steuerliche Altlasten.",
+    st3_t:"Konzernreporting",st3_p:"Reporting-Pakete auf ES, EN oder DE, im Konzernkalender.",
+    st4_t:"Lohn und Entsandte",st4_p:"IMSS-Anmeldung, Berechnung und Compliance für lokale und ausländische Mitarbeitende.",
+    why_eyebrow:"Warum wir",why_h2:"Verlässliche Zahlen, pünktlich geliefert",
+    w1_t:"Qualität",w1_p:"Exzellenz beim Abschluss: bessere finanzielle Sicht, ein gesundes Verhältnis zum SAT und klarere Entscheidungen.",
+    w2_t:"Technologie",w2_p:"Wir automatisieren 85% des Buchhaltungsprozesses. Weniger menschliche Fehler, kürzere Reaktionszeiten, direkte SAT-Anbindung.",
+    w3_t:"Best Practices",w3_p:"Breiter Mandantenstamm über Branchen hinweg: Was sich bewährt, bringen wir zu Ihnen.",
+    w4_t:"Preise nach Maß",w4_p:"Die Leistung passt sich Ihrem Betrieb an, nicht umgekehrt. Individuelle Berichte mit Ihren KPIs.",
+    c_eyebrow:"Kontakt",c_h2:"Erzählen Sie uns, wo Sie stehen",
+    c_p:"Ein Gespräch von 30 Minuten genügt, um zu klären, ob wir helfen können und welches Modell passt. Unverbindlich.",
+    f_name:"Name",f_company:"Unternehmen",f_email:"E-Mail",f_msg:"Was brauchen Sie?",f_send:"Senden",
+    foot_tag:"Buchhaltung · Steuern · Lohn · Treasury · Reporting · Controlling"
+  }
+};
+
+// guarda los textos originales (ES) al cargar
+const ES = {};
+document.querySelectorAll('[data-i18n]').forEach(el=>{ ES[el.dataset.i18n] = el.innerHTML; });
+
+function setLang(lang){
+  const dict = lang === 'es' ? ES : I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.dataset.i18n;
+    if(dict && dict[k]) el.innerHTML = dict[k];
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
+}
+document.querySelectorAll('.lang button').forEach(b=>{
+  b.addEventListener('click',()=>setLang(b.dataset.lang));
+});
+
+// carrusel del portal
+const slides = document.querySelectorAll('#carousel .slide');
+const sideItems = document.querySelectorAll('.mock-side .s');
+const dots = document.getElementById('dots');
+let idx = 0, timer;
+slides.forEach((_,i)=>{
+  const b=document.createElement('button');
+  if(i===0) b.classList.add('on');
+  b.addEventListener('click',()=>{ go(i); reset(); });
+  dots.appendChild(b);
+});
+function go(i){
+  idx = i % slides.length;
+  slides.forEach((s,j)=>s.classList.toggle('on', j===idx));
+  dots.querySelectorAll('button').forEach((d,j)=>d.classList.toggle('on', j===idx));
+  sideItems.forEach((s,j)=>s.classList.toggle('on', j===idx));
+}
+function reset(){ clearInterval(timer); timer = setInterval(()=>go(idx+1), 4200); }
+reset();
+
+// menú móvil
+document.getElementById('burger').addEventListener('click',()=>{
+  document.getElementById('links').classList.toggle('open');
+});
+document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('links').classList.remove('open');
+}));
+
+// formulario -> mailto (sin backend)
+function sendMail(e){
+  e.preventDefault();
+  const n=document.getElementById('f_name').value;
+  const c=document.getElementById('f_co').value;
+  const m=document.getElementById('f_mail').value;
+  const t=document.getElementById('f_msg').value;
+  const body = encodeURIComponent(`Nombre: ${n}\nEmpresa: ${c}\nCorreo: ${m}\n\n${t}`);
+  window.location.href = `mailto:fonseca@financialcr.com?subject=${encodeURIComponent('Contacto web — '+(c||n))}&body=${body}`;
+  return false;
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

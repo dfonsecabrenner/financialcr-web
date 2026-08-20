@@ -12,13 +12,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23698A34'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.4' fill='%23fff'/%3E%3Crect x='14' y='12' width='4' height='13' rx='1.4' fill='%23fff' opacity='.85'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.4' fill='%23fff' opacity='.7'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2377A544'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.4' fill='%23fff'/%3E%3Crect x='14' y='12' width='4' height='13' rx='1.4' fill='%23fff' opacity='.85'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.4' fill='%23fff' opacity='.7'/%3E%3C/svg%3E">
 <style>
   :root{
-    --green:#698A34; --green-light:#8CAD4E; --green-deep:#49652E;
-    --green-tint:#F1F5EA; --green-tint2:#E3EBD6;
-    --ink:#333133; --ink-soft:#6B6A6C; --line:#E5E4E3;
-    --paper:#FBFBFA; --card:#FFFFFF;
+    --green:#77A544; --green-light:#95BE69; --green-deep:#46882F;
+    --green-tint:#F2F7EC; --green-tint2:#DFEAD1;
+    --ink:#4A4C4C; --ink-soft:#7A7C7C; --line:#E4E5E4;
+    --paper:#FBFBFA; --card:#FFFFFF; --green-dark:#35661F;
     --radius:14px;
     --shadow:0 1px 2px rgba(51,49,51,.05), 0 10px 30px rgba(51,49,51,.07);
     --maxw:1160px;
@@ -33,7 +33,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
   .eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;
-    padding:13px 22px;border-radius:10px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;
+    padding:13px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;
     transition:background .15s ease}
   .btn:hover{background:var(--green-deep)}
   .btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green-light)}
@@ -49,15 +49,19 @@
   .logomark i:nth-child(1){left:8px;height:8px;opacity:1}
   .logomark i:nth-child(2){left:14px;height:13px;opacity:.85}
   .logomark i:nth-child(3){left:20px;height:18px;opacity:.7}
+  .logo-img{height:32px;width:auto;display:block}
   .brand b{font-family:'Barlow',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;display:block}
   .brand span{font-size:.7rem;color:var(--ink-soft);letter-spacing:.04em;display:block}
-  nav.links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
+  nav.links{display:flex;gap:20px;font-size:.88rem;font-weight:500}
+  nav.links a{white-space:nowrap}
   nav.links a:hover{color:var(--green)}
-  .nav-right{display:flex;align-items:center;gap:14px;flex:none}
+  .nav-right{display:flex;align-items:center;gap:10px;flex:none}
   .lang{display:flex;gap:2px;background:var(--green-tint);border-radius:8px;padding:3px}
   .lang button{border:none;background:none;font:inherit;font-size:.78rem;font-weight:600;color:var(--ink-soft);
     padding:5px 9px;border-radius:6px;cursor:pointer}
   .lang button.on{background:#fff;color:var(--green-deep);box-shadow:0 1px 2px rgba(0,0,0,.07)}
+  .portal-link{white-space:nowrap}
+  @media(max-width:1230px){.portal-link{display:none}}
   .burger{display:none;border:none;background:none;font-size:1.5rem;cursor:pointer;color:var(--ink)}
 
   /* ---------- HERO ---------- */
@@ -78,7 +82,7 @@
   .mock-bar .url{margin-left:10px;font-size:.7rem;color:var(--ink-soft);background:var(--paper);border-radius:5px;
     padding:3px 10px;flex:1}
   .mock-body{display:grid;grid-template-columns:104px 1fr;min-height:328px}
-  .mock-side{background:var(--green-deep);padding:16px 12px;display:flex;flex-direction:column;gap:6px}
+  .mock-side{background:var(--green-dark);padding:16px 12px;display:flex;flex-direction:column;gap:6px}
   .mock-side .s{height:9px;border-radius:4px;background:rgba(255,255,255,.22)}
   .mock-side .s.on{background:var(--green-light)}
   .mock-side .logo{width:22px;height:22px;border-radius:6px;background:var(--green-light);margin-bottom:14px}
@@ -112,7 +116,7 @@
   .sec-head{max-width:44em;margin-bottom:44px}
   .sec-head h2{font-size:clamp(1.6rem,2.9vw,2.25rem);margin:12px 0 14px}
   .sec-head p{color:var(--ink-soft);font-size:1.02rem}
-  #live{background:var(--green-deep);color:#fff}
+  #live{background:var(--green-dark);color:#fff}
   #live .sec-head h2,#live h3{color:#fff}
   #live .sec-head p{color:rgba(255,255,255,.76)}
   #live .eyebrow{color:var(--green-light)}
@@ -182,11 +186,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <span class="logomark"><i></i><i></i><i></i></span>
-      <span>
-        <b>Financial</b>
-        <span>Controlling &amp; Reporting</span>
-      </span>
+      <img src="logo.png" alt="Financial Controlling &amp; Reporting" class="logo-img">
     </a>
     <nav class="links" id="links">
       <a href="#live" data-i18n="nav_live">Financial LIVE</a>
@@ -202,6 +202,7 @@
         <button data-lang="en">EN</button>
         <button data-lang="de">DE</button>
       </div>
+      <a class="btn ghost portal-link" href="https://portal.financialcr.com" target="_blank" rel="noopener" data-i18n="cta_portal">Acceso clientes</a>
       <a class="btn" href="#contacto" data-i18n="cta_talk">Hablemos</a>
       <button class="burger" id="burger" aria-label="Menú">☰</button>
     </div>
@@ -456,7 +457,7 @@
 const I18N = {
   en:{
     nav_live:"Financial LIVE",nav_serv:"Services",nav_models:"Models",nav_startups:"Startups",nav_about:"About us",nav_contact:"Contact",
-    cta_talk:"Let's talk",
+    cta_talk:"Let's talk",cta_portal:"Client login",
     hero_eyebrow:"Accounting firm · Mexico",
     hero_h1:"Your books in order. Your numbers always within reach.",
     hero_lead:"Accounting, tax, payroll, treasury, reporting and controllership for companies that need reliable numbers on time. And with Financial LIVE, your self-service portal, you stop waiting for someone to email you a file.",
@@ -513,7 +514,7 @@ const I18N = {
   },
   de:{
     nav_live:"Financial LIVE",nav_serv:"Leistungen",nav_models:"Modelle",nav_startups:"Start-ups",nav_about:"Über uns",nav_contact:"Kontakt",
-    cta_talk:"Sprechen wir",
+    cta_talk:"Sprechen wir",cta_portal:"Kundenzugang",
     hero_eyebrow:"Steuer- und Buchhaltungskanzlei · Mexiko",
     hero_h1:"Ihre Buchhaltung in Ordnung. Ihre Zahlen jederzeit griffbereit.",
     hero_lead:"Buchhaltung, Steuern, Lohn, Treasury, Reporting und Controlling für Unternehmen, die verlässliche Zahlen pünktlich brauchen. Und mit Financial LIVE, Ihrem Self-Service-Portal, warten Sie nicht mehr darauf, dass Ihnen jemand eine Datei schickt.",

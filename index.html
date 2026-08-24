@@ -24,6 +24,7 @@
     --maxw:1160px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html,body{max-width:100%;overflow-x:hidden}
   html{scroll-behavior:smooth}
   body{font-family:'Hind',Arial,system-ui,sans-serif;color:var(--ink);background:var(--paper);
     line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -165,8 +166,18 @@
   footer{border-top:1px solid var(--line);padding:34px 0;font-size:.85rem;color:var(--ink-soft)}
   .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 
+  .menu-cta{display:none}
   @media(max-width:900px){
     .hero-grid,.live-grid,#contacto .box{grid-template-columns:1fr;gap:38px}
+    .nav-right > .btn{display:none}
+    .nav{gap:10px}
+    .brand .logo-img{height:28px}
+    .menu-cta{display:block;text-align:center;padding:11px 16px;border-radius:10px;font-weight:600}
+    .menu-cta.portal{border:1.5px solid var(--green-light);color:var(--green-deep)}
+    .menu-cta.hablemos{background:var(--green);color:#fff}
+    nav.links.open{gap:6px}
+    nav.links.open a{padding:8px 0}
+    nav.links.open a.menu-cta{padding:11px 16px;margin-top:4px}
     .grid3,.why{grid-template-columns:1fr 1fr}
     nav.links{display:none}
     nav.links.open{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;
@@ -175,6 +186,8 @@
   }
   @media(max-width:620px){
     .grid3,.grid2,.why{grid-template-columns:1fr}
+    .hero-stats{grid-template-columns:1fr 1fr;gap:18px 22px}
+    .hero h1{max-width:100%}
     section{padding:58px 0}
     .hero{padding:56px 0 48px}
     #contacto .box{padding:30px 22px}
@@ -195,6 +208,8 @@
       <a href="#startups" data-i18n="nav_startups">Startups</a>
       <a href="#nosotros" data-i18n="nav_about">Nosotros</a>
       <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+      <a class="menu-cta portal" href="https://portal.financialcr.com" target="_blank" rel="noopener" data-i18n="cta_portal">Acceso clientes</a>
+      <a class="menu-cta hablemos" href="#contacto" data-i18n="cta_talk">Hablemos</a>
     </nav>
     <div class="nav-right">
       <div class="lang">

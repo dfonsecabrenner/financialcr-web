@@ -433,12 +433,18 @@
           <a href="mailto:fonseca@financialcr.com"><span class="ic">✉</span><span>fonseca@financialcr.com</span></a>
         </div>
       </div>
-      <form onsubmit="return sendMail(event)">
-        <div class="f"><label data-i18n="f_name">Nombre</label><input id="f_name" required></div>
-        <div class="f"><label data-i18n="f_company">Empresa</label><input id="f_co"></div>
-        <div class="f"><label data-i18n="f_email">Correo</label><input id="f_mail" type="email" required></div>
-        <div class="f"><label data-i18n="f_msg">¿Qué necesitas?</label><textarea id="f_msg"></textarea></div>
+      <form id="contactForm" action="https://formsubmit.co/fonseca@financialcr.com" method="POST">
+        <input type="hidden" name="_subject" value="Contacto desde financialcr.com">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.financialcr.com/?enviado=1">
+        <input type="text" name="_honey" style="display:none">
+        <div class="f"><label data-i18n="f_name">Nombre</label><input id="f_name" name="Nombre" required></div>
+        <div class="f"><label data-i18n="f_company">Empresa</label><input id="f_co" name="Empresa"></div>
+        <div class="f"><label data-i18n="f_email">Correo</label><input id="f_mail" name="Correo" type="email" required></div>
+        <div class="f"><label data-i18n="f_msg">¿Qué necesitas?</label><textarea id="f_msg" name="Mensaje"></textarea></div>
         <button class="btn" style="width:100%" type="submit" data-i18n="f_send">Enviar</button>
+        <p id="formOk" style="display:none;margin-top:12px;padding:10px 12px;border-radius:9px;background:var(--green-tint);color:var(--green-deep);font-size:.9rem;font-weight:500" data-i18n="f_ok">Gracias, recibimos tu mensaje. Te contactamos en breve.</p>
       </form>
     </div>
   </div>
@@ -510,6 +516,7 @@ const I18N = {
     c_eyebrow:"Contact",c_h2:"Tell us where you stand",
     c_p:"A 30-minute call is enough to know whether we can help and which model makes sense. No commitment.",
     f_name:"Name",f_company:"Company",f_email:"Email",f_msg:"What do you need?",f_send:"Send",
+    f_ok:"Thank you — we received your message and will be in touch shortly.",
     foot_tag:"Accounting · Tax · Payroll · Treasury · Reporting · Controllership"
   },
   de:{
@@ -567,6 +574,7 @@ const I18N = {
     c_eyebrow:"Kontakt",c_h2:"Erzählen Sie uns, wo Sie stehen",
     c_p:"Ein Gespräch von 30 Minuten genügt, um zu klären, ob wir helfen können und welches Modell passt. Unverbindlich.",
     f_name:"Name",f_company:"Unternehmen",f_email:"E-Mail",f_msg:"Was brauchen Sie?",f_send:"Senden",
+    f_ok:"Vielen Dank — wir haben Ihre Nachricht erhalten und melden uns in Kürze.",
     foot_tag:"Buchhaltung · Steuern · Lohn · Treasury · Reporting · Controlling"
   }
 };
@@ -616,16 +624,13 @@ document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>
   document.getElementById('links').classList.remove('open');
 }));
 
-// formulario -> mailto (sin backend)
-function sendMail(e){
-  e.preventDefault();
-  const n=document.getElementById('f_name').value;
-  const c=document.getElementById('f_co').value;
-  const m=document.getElementById('f_mail').value;
-  const t=document.getElementById('f_msg').value;
-  const body = encodeURIComponent(`Nombre: ${n}\nEmpresa: ${c}\nCorreo: ${m}\n\n${t}`);
-  window.location.href = `mailto:fonseca@financialcr.com?subject=${encodeURIComponent('Contacto web — '+(c||n))}&body=${body}`;
-  return false;
+// confirmacion tras enviar el formulario (vuelve con ?enviado=1)
+if (new URLSearchParams(location.search).get('enviado') === '1') {
+  const ok = document.getElementById('formOk');
+  if (ok) {
+    ok.style.display = 'block';
+    document.getElementById('contactForm').scrollIntoView({behavior:'smooth', block:'center'});
+  }
 }
 
 document.getElementById('year').textContent = new Date().getFullYear();

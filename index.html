@@ -11,23 +11,23 @@
 <meta property="og:url" content="https://www.financialcr.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2377A544'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.4' fill='%23fff'/%3E%3Crect x='14' y='12' width='4' height='13' rx='1.4' fill='%23fff' opacity='.85'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.4' fill='%23fff' opacity='.7'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238CAD4E'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.4' fill='%23fff'/%3E%3Crect x='14' y='12' width='4' height='13' rx='1.4' fill='%23fff' opacity='.85'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.4' fill='%23fff' opacity='.7'/%3E%3C/svg%3E">
 <style>
   :root{
-    --green:#77A544; --green-light:#95BE69; --green-deep:#46882F;
-    --green-tint:#F2F7EC; --green-tint2:#DFEAD1;
+    --green:#698A34; --green-main:#8CAD4E; --green-light:#AEC87D; --green-deep:#49652E;
+    --green-tint:#F3F7EB; --green-tint2:#D4E1B1;
     --ink:#4A4C4C; --ink-soft:#7A7C7C; --line:#E4E5E4;
-    --paper:#FBFBFA; --card:#FFFFFF; --green-dark:#35661F;
+    --paper:#FBFBFA; --card:#FFFFFF; --green-dark:#3A5225;
     --radius:14px;
     --shadow:0 1px 2px rgba(51,49,51,.05), 0 10px 30px rgba(51,49,51,.07);
     --maxw:1160px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);
+  body{font-family:'Hind',Arial,system-ui,sans-serif;color:var(--ink);background:var(--paper);
     line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,h4{font-family:'Barlow','Inter',sans-serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+  h1,h2,h3,h4{font-family:'Hind',Arial,sans-serif;font-weight:600;line-height:1.15;letter-spacing:-.01em}
   a{color:inherit;text-decoration:none}
   img{max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -50,7 +50,7 @@
   .logomark i:nth-child(2){left:14px;height:13px;opacity:.85}
   .logomark i:nth-child(3){left:20px;height:18px;opacity:.7}
   .logo-img{height:32px;width:auto;display:block}
-  .brand b{font-family:'Barlow',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;display:block}
+  .brand b{font-family:'Hind',Arial,sans-serif;font-size:1rem;font-weight:700;letter-spacing:-.01em;line-height:1.1;display:block}
   .brand span{font-size:.7rem;color:var(--ink-soft);letter-spacing:.04em;display:block}
   nav.links{display:flex;gap:20px;font-size:.88rem;font-weight:500}
   nav.links a{white-space:nowrap}
@@ -72,7 +72,7 @@
   .hero p.lead{font-size:1.05rem;color:var(--ink-soft);max-width:34em}
   .hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
   .hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:26px;margin-top:44px;justify-content:start}
-  .hero-stats div b{font-family:'Barlow',sans-serif;font-size:1.75rem;color:var(--green-deep);display:block;line-height:1}
+  .hero-stats div b{font-family:'Hind',Arial,sans-serif;font-size:1.75rem;color:var(--green-deep);display:block;line-height:1}
   .hero-stats div span{font-size:.82rem;color:var(--ink-soft)}
 
   /* ---------- PORTAL MOCK ---------- */
@@ -90,12 +90,12 @@
   .slide{display:none;animation:fade .45s ease}
   .slide.on{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .slide h5{font-family:'Barlow',sans-serif;font-size:.95rem;margin-bottom:3px}
+  .slide h5{font-family:'Hind',Arial,sans-serif;font-size:.95rem;margin-bottom:3px}
   .slide .sub{font-size:.72rem;color:var(--ink-soft);margin-bottom:14px}
   .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px}
   .kpi{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:9px 10px}
   .kpi span{font-size:.62rem;color:var(--ink-soft);display:block;letter-spacing:.02em}
-  .kpi b{font-family:'Barlow',sans-serif;font-size:1rem;display:block;margin-top:2px}
+  .kpi b{font-family:'Hind',Arial,sans-serif;font-size:1rem;display:block;margin-top:2px}
   .kpi b.pos{color:var(--green)} .kpi b.neg{color:var(--ink)}
   .bars{display:flex;align-items:flex-end;gap:7px;height:84px;padding-top:6px}
   .bars div{flex:1;border-radius:4px 4px 0 0;background:var(--green-light)}
@@ -131,7 +131,7 @@
   .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px}
   .card .ic{width:38px;height:38px;border-radius:10px;background:var(--green-tint);color:var(--green-deep);
-    display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px;font-family:'Barlow',sans-serif}
+    display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px;font-family:'Hind',Arial,sans-serif}
   .card h3{font-size:1.05rem;margin-bottom:7px}
   .card p{font-size:.92rem;color:var(--ink-soft)}
   .card.plan{display:flex;flex-direction:column}
